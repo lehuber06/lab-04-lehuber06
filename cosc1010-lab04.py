@@ -101,13 +101,14 @@ min_temps = [
 
 avg_max = 0
 avg_min = 0
+element_total = len(max_temps)
 
-for temps in max_temps:
-    avg_max += max_temps[temps]
-    avg_min += min_temps[temps]
+for temp in range(0, element_total):
+    avg_max += max_temps[temp]
+    avg_min += min_temps[temp]
 
-print(f"\nThe average maximum temperature is {avg_max/len(max_temps)}F")
-print(f"The average minimum temperature is {avg_min/len(min_temps)}F")
+print(f"\nThe average maximum temperature is {avg_max/element_total}F")
+print(f"The average minimum temperature is {avg_min/element_total}F")
 
 # For the next part, determine the highest and lowest recorded temperatures.
 # HINT: You can find this information without using any logic or looping.
